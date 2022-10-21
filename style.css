@@ -11,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   justify-content: center;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -21,11 +22,25 @@ h1 {
   align-items: center;
   background-color: steelblue;
   border-radius: 10px;
-  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
   color: #fff;
   display: flex;
   height: 150px;
   justify-content: center;
   margin: 10px;
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
   width: 400px;
+}
+
+.box h2 {
+  font-size: 30px;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
 }
